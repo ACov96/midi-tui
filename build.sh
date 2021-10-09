@@ -1,11 +1,15 @@
 #!/bin/bash
 
-[ ! -d ./build ] && mkdir build
+set -e 
 
-pushd build
+[ ! -d ./out ] && mkdir out
+
+pushd out
 
 cmake ..
 
 cmake --build .
 
 popd
+
+exit 0

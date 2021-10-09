@@ -5,11 +5,19 @@
 #include <iostream>
 #include <string>
 #include "util.h"
+#include "config.h"
 
 int main(int argc, char* argv[]) {
+    gConfig.Initialize(argc, argv);
+
+    if (gConfig.ShouldDisplayHelp()) {
+        Util::display_help();
+        return EXIT_SUCCESS;
+    }
+
     auto component = ftxui::Renderer([&] {
         return ftxui::hbox({
-            ftxui::text(basic_string_to_wstring("Title")) | ftxui::flex | ftxui::border
+            ftxui::text(Util::basic_string_to_wstring(gConfig.GetFileToOpen().string())) | ftxui::flex | ftxui::border
         });
     });
 
