@@ -2,6 +2,7 @@ add_executable(midi-tui
     main.cpp 
     util.cpp
     config.cpp
+    editor.cpp
 )
 
 set_property(TARGET midi-tui PROPERTY CXX_STANDARD 20)

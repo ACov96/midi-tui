@@ -1,5 +1,4 @@
-#ifndef _MIDITUI_CONFIG_H
-#define _MIDITUI_CONFIG_H
+#pragma once
 
 #include <filesystem>
 
@@ -16,5 +15,3 @@ private:
 };
 
 extern Config gConfig;
-
-#endif

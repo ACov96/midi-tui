@@ -1,5 +1,4 @@
-#ifndef _MIDITUI_UTIL_H
-#define _MIDITUI_UTIL_H
+#pragma once
 
 #include <string>
 
@@ -11,5 +10,3 @@ public:
 
     static void display_help();
 };
-
-#endif
